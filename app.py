@@ -30,7 +30,7 @@ st.set_page_config(page_title = "Disney Plus", page_icon = ":movie_camera:", lay
 #     st.write(filename)
 #     df = pd.read_csv(filename,encoding = "ISO-8859-1")
 # else:
-file_path = '/Users/rupsachakraborty/Desktop/JOB/Kaggle/DisneyData/disney_plus_titles.csv'
+file_path = 'disney_plus_titles.csv'
 df = pd.read_csv(file_path,encoding = "ISO-8859-1")
 
 
