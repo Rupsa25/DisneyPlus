@@ -2,7 +2,7 @@ import os
 import json
 import shutil
 import subprocess
-import kaggle
+# import kaggle
 from collections import Counter
 import plotly.graph_objects as go
 from plotly.offline import init_notebook_mode, iplot
