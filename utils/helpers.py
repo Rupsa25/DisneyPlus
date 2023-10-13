@@ -9,29 +9,31 @@ from plotly.offline import init_notebook_mode, iplot
 import plotly.express as px
 from utils.country_codes import run_this
 
+#helpers to download dataset
+
 #make sure to have the kaggle.json file in the main directory
-def get_json_data():
-    main_directory = os.path.dirname(os.path.abspath(__file__))
-    json_file_path = os.path.join(main_directory, '../kaggle.json')
-    with open(json_file_path, 'r') as json_file:
-        json_data = json.load(json_file)
-    username = json_data.get('username')
-    key = json_data.get('key')
+# def get_json_data():
+#     main_directory = os.path.dirname(os.path.abspath(__file__))
+#     json_file_path = os.path.join(main_directory, '../kaggle.json')
+#     with open(json_file_path, 'r') as json_file:
+#         json_data = json.load(json_file)
+#     username = json_data.get('username')
+#     key = json_data.get('key')
 
-    return [username,key]
+#     return [username,key]
 
-
-def dataset_download_kaggle(dataset_owner,dataset_name):
+#helpers to download dataset
+# def dataset_download_kaggle(dataset_owner,dataset_name):
     
-    [username,key] = get_json_data()
+#     [username,key] = get_json_data()
 
-    os.environ['KAGGLE_USERNAME'] = username
-    os.environ['KAGGLE_KEY'] = key
-    # Set the directory where you want to download the dataset
-    download_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#     os.environ['KAGGLE_USERNAME'] = username
+#     os.environ['KAGGLE_KEY'] = key
+#     # Set the directory where you want to download the dataset
+#     download_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # Download the dataset
-    kaggle.api.dataset_download_files(dataset_owner + '/' + dataset_name, path=download_dir, unzip=True)
+#     # Download the dataset
+#     kaggle.api.dataset_download_files(dataset_owner + '/' + dataset_name, path=download_dir, unzip=True)
 
 
   
